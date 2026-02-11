@@ -1,0 +1,80 @@
+!DOCTYPE html>
+<html>
+<head>
+  <title>♾️</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff5f8;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .box {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .yes {
+      background: orange;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      font-size: 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    #no {
+      background: #ccc;
+      color: #555;
+      border: none;
+      padding: 12px 28px;
+      font-size: 18px;
+      border-radius: 30px;
+      position: absolute;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>Will you be my person forever ♾️🫶?</h1>
+  <button class="yes" onclick="goYes()">Yes ❤️</button>
+</div>
+
+<button id="no" onmouseover="moveNo()" ontouchstart="moveNo()">No 💔</button>
+
+<script>
+  function moveNo() {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    no.style.left = x + "px";
+    no.style.top = y + "px";
+  }
+
+  function goYes() {
+    window.location.href = "thanks.html";
+  }
+</script>
+
+</body>
+</html>
